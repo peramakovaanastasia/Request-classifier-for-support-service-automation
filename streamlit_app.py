@@ -16,7 +16,7 @@ st.markdown("""
 
 user_input = st.text_area(
     "Текст обращения:",
-    height=150,
+    height=100,
     placeholder="Например: У меня не проходит оплата картой",
 )
 

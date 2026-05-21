@@ -125,6 +125,7 @@ def main() -> None:
     model = LogisticRegression(
         max_iter=1000,
         random_state=42,
+        class_weight="balanced"
     )
 
     model.fit(x_train_tf, y_train)
@@ -182,7 +183,7 @@ def main() -> None:
     print(f"Confusion matrix сохранена в {CONFUSION_MATRIX_PATH}")
     print(f"Ошибки модели сохранены в {MODEL_ERRORS_PATH}")
     print(f"Метрики сохранены в {METRICS_SUMMARY_PATH}")
-
+    print(df["category"].value_counts())
 
 if __name__ == "__main__":
     main()
